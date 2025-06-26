@@ -1,0 +1,20 @@
+{
+    "start_urls": ["https://cert-www.lexisnexis.co.uk/solutions/legal-guidance-and-research.html"],
+    "allowed_domains": ["cert-www.lexisnexis.co.uk"],
+    "respect_robots_txt": true,
+    "concurrent_requests": 2,
+    "delay": 1.0,
+    "max_depth": 2,
+    "follow_links": true,
+    "extract_rules": {
+        "title": "//title/text()",
+        "meta_description": "//meta[@name='description']/@content",
+        "meta_keywords": "//meta[@name='keywords']/@content",
+        "h1": "//h1/text()",
+        "h2": "//h2/text()",
+        "h3": "//h3/text()",
+        "links": "//a/@href",
+        "images": "//img/@src",
+        "alt_texts": "//img/@alt"
+    }
+} 
